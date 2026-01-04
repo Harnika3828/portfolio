@@ -7,6 +7,33 @@
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* PROJECT CARDS - Remove link underlines */
+        .project-link {
+            text-decoration: none !important;
+            color: inherit !important;
+            display: block;
+        }
+        
+        .project-link:hover {
+            text-decoration: none !important;
+        }
+        
+        /* Make sure all text inside the link has no underline */
+        .project-link h3,
+        .project-link p,
+        .project-link span {
+            text-decoration: none !important;
+        }
+        
+        /* Optional hover effects */
+        .project-link:hover .project-card {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(31, 122, 116, 0.2);
+            transition: all 0.3s ease;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
