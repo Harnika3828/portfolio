@@ -13,6 +13,18 @@
     --radius: 20px;
     --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+/* Remove underline from project links */
+.project-link {
+    text-decoration: none !important;
+    color: inherit; /* Keep original text color */
+    display: block; /* Make it a block element */
+}
+
+/* Optional: Add hover effect */
+.project-link:hover .project-card {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
 
 * {
     margin: 0;
