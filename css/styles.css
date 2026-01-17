@@ -130,12 +130,20 @@ body {
     align-items: center;
     padding-top: 100px;
     gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .hero-content {
     flex: 1;
-    left-padding:10;
+    padding-left: 10px; /* Fixed invalid left-padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
 
 .hero-title {
     font-size: clamp(2.5rem, 5vw, 4rem);
