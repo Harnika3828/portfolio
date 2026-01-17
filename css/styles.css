@@ -152,12 +152,6 @@ body {
     align-items: center;
 }
 
-.profile-card {
-    width: clamp(280px, 30vw, 360px);
-    height: clamp(280px, 30vw, 360px);
-    position: relative;
-}
-
 .hero-title {
     font-size: clamp(2.5rem, 5vw, 4.5rem);
     font-weight: 800;
@@ -228,8 +222,8 @@ body {
 }
 
 .profile-card {
-    width: 320px;
-    height: 320px;
+    width: clamp(280px, 30vw, 360px);
+    height: clamp(280px, 30vw, 360px);
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
     border-radius: var(--radius);
@@ -240,6 +234,7 @@ body {
     box-shadow: var(--shadow);
     transition: var(--transition);
     animation: float 6s ease-in-out infinite;
+    position: relative;
 }
 
 .profile-img {
@@ -328,8 +323,47 @@ body {
     color: var(--text-secondary);
 }
 
-/* SKILLS (Enhanced - Removed duplicate) */
-/* SKILLS WITH PERCENTAGE BARS */
+/* SKILLS */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    max-width: 1000px;
+    margin: 3rem auto 0;
+    justify-items: center;
+}
+
+.skills-column {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    text-align: center;
+}
+
+.skills-column:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+}
+
+.skills-column h3 {
+    color: var(--accent-secondary);
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.skills-column ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
 .skills-column li {
     position: relative;
     padding: 0;
@@ -340,7 +374,7 @@ body {
 }
 
 .skills-column li::before {
-    display: none; /* Remove arrow */
+    display: none;
 }
 
 .skill-item {
@@ -402,7 +436,6 @@ body {
     100% { transform: translateX(100%); }
 }
 
-/* Hover effect on skill items */
 .skills-column li:hover .skill-name {
     color: var(--text-primary);
 }
@@ -411,7 +444,7 @@ body {
     box-shadow: 0 0 20px rgba(240, 147, 251, 0.8);
 }
 
-/* EXPERIENCE (From previous) */
+/* EXPERIENCE */
 .experience-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -474,7 +507,7 @@ body {
     color: #667eea;
 }
 
-/* CONTACT & OTHERS */
+/* CONTACT */
 .contact-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -513,7 +546,8 @@ body {
     margin: 0 auto;
 }
 
-/* MOBILE */
+/* RESPONSIVE */
+/* Tablets & Large Phones */
 @media (max-width: 768px) {
     .hamburger { display: flex; }
     
@@ -522,11 +556,12 @@ body {
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background: var(--bg-primary);
+        background: rgba(10,10,10,0.98);
         width: 100%;
         text-align: center;
-        transition: left 0.3s;
+        transition: left 0.3s ease;
         padding: 2rem 0;
+        gap: 1.5rem;
     }
     
     .nav-links.active { left: 0; }
@@ -534,17 +569,44 @@ body {
     .hero {
         flex-direction: column;
         text-align: center;
-        gap: 2rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
+        gap: clamp(2rem, 8vw, 4rem);
+        padding: 100px 1rem 80px;
     }
     
-    .hero-content { padding-left: 0; max-width: none; }
+    .hero-content {
+        order: 2;
+        padding-right: 0;
+        max-width: 100%;
+    }
     
-    .section { padding-left: 1rem; padding-right: 1rem; }
+    .hero-image {
+        order: 1;
+        width: 100%;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-self: stretch;
+    }
+    
+    .btn {
+        justify-content: center;
+        padding: 1.2rem 2rem;
+    }
+    
+    .section { padding: 60px 1rem; }
     
     .contact-content { grid-template-columns: 1fr; gap: 2rem; }
     
     .skills-grid, .experience-grid { grid-template-columns: 1fr; }
+    
+    .skills-column, .exp-card { max-width: none; }
 }
 
+/* Small Phones */
+@media (max-width: 480px) {
+    .hero-title { font-size: clamp(2rem, 10vw, 3rem) !important; }
+    .hero-subtitle { font-size: clamp(1.1rem, 4vw, 1.25rem); }
+    .profile-card { width: 280px; height: 280px; }
+    .projects-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+}
