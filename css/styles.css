@@ -134,6 +134,7 @@ body {
 
 .hero-content {
     flex: 1;
+    left-padding:10;
 }
 
 .hero-title {
