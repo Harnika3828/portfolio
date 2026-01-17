@@ -7,35 +7,9 @@
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <style>
-        /* PROJECT CARDS - Remove link underlines */
-        .project-link {
-            text-decoration: none !important;
-            color: inherit !important;
-            display: block;
-        }
-        
-        .project-link:hover {
-            text-decoration: none !important;
-        }
-        
-        /* Make sure all text inside the link has no underline */
-        .project-link h3,
-        .project-link p,
-        .project-link span {
-            text-decoration: none !important;
-        }
-        
-        /* Optional hover effects */
-        .project-link:hover .project-card {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(31, 122, 116, 0.2);
-            transition: all 0.3s ease;
-        }
-    </style>
 </head>
 <body>
+    <!-- NAVBAR -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">Harnika</div>
@@ -54,9 +28,10 @@
         </div>
     </nav>
 
+    <!-- HERO -->
     <section id="hero" class="hero">
         <div class="hero-content">
-            <h1 class="hero-title">Hi, I’m <span class="gradient-text">Harnika</span></h1>
+            <h1 class="hero-title">Hi, I'm <span class="gradient-text">Harnika</span></h1>
             <p class="hero-subtitle">A Creative Designer & Digital Problem Solver passionate about turning ideas into visually compelling and user-centric digital experiences.</p>
             <p class="tagline">Designing with purpose, creativity, and impact.</p>
             <div class="hero-buttons">
@@ -65,119 +40,117 @@
             </div>
         </div>
         <div class="hero-image">
-        <div class="profile-card">
-            <img src="me.jpeg" alt="Harnika - Creative Designer" class="profile-img">
+            <div class="profile-card">
+                <img src="me.jpeg" alt="Harnika - Creative Designer" class="profile-img">
+            </div>
+        </div> <!-- Fixed: Closed hero-image div properly -->
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+        <h2 class="section-title">🚀 Project Highlights</h2>
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <a href="https://harnika3828.github.io/pet-licks/" class="project-link" target="_blank">
+                <div class="project-card">
+                    <div class="project-image-placeholder">
+                        <i class="fas fa-paw"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Pet Care Brand Awareness Campaign</h3>
+                        <p>Conceptualized and designed an emotional awareness campaign focused on responsible pet care and nutrition. Connected emotionally with pet owners while educating on long-term pet health.</p>
+                        <div class="project-tech">
+                            <span>HTML/CSS</span>
+                            <span>Web Design</span>
+                            <span>Branding</span>
+                        </div>
+                        <div class="project-footer">
+                            <span>Concept & Visual Design</span>
+                            <span>Emotional Storytelling</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <!-- Project 2 - Make clickable -->
+            <a href="#" class="project-link" target="_blank">
+                <div class="project-card">
+                    <div class="project-image-placeholder">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Python Learning Projects</h3>
+                        <p>Developed beginner-to-intermediate Python programs solving real-world problems: billing systems, loops, conditionals, and logic exercises.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Algorithms</span>
+                        </div>
+                        <div class="project-footer">
+                            <span>Problem Solving</span>
+                            <span>Logical Thinking</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
         </div>
     </section>
 
-    <section id="projects" class="section">
-    <h2 class="section-title">🚀 Project Highlights</h2>
-
-    <div class="projects-grid">
-        <!-- PROJECT 1 - Link wraps entire card -->
-        <a href="https://harnika3828.github.io/pet-licks/index.html" class="project-link">
-            <div class="project-card">
-                <div class="project-image-placeholder">
-                    <i class="fas fa-paw"></i>
-                </div>
-                <div class="project-content">
-                    <h3>Pet Care Brand Awareness Campaign</h3>
-                    <p>Conceptualized and designed an emotional awareness campaign focused on responsible pet care and nutrition. The objective was to connect emotionally with pet owners while educating them on long-term pet health.</p>
-                    <div class="project-tech">
-                        <span>HTML</span>
-                        <span>Web Design</span>
-                        <span>CSSS</span>
-                    </div>
-                    <div class="project-footer">
-                        <span>Concept creation, visual design, storytelling</span>
-                        <span>Strong emotional engagement</span>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <!-- End of Project 1 -->
-
-        <!-- PROJECT 2 - Add href if needed -->
-        <div class="project-card">
-            <div class="project-image-placeholder">
-                <i class="fas fa-code"></i>
-            </div>
-            <div class="project-content">
-                <h3>Python Learning Projects</h3>
-                <p>Developed multiple beginner-to-intermediate Python programs to solve real-world problems such as billing systems, loops, conditionals, and logic-based exercises.</p>
-                <div class="project-tech">
-                    <span>Python</span>
-                </div>
-                <div class="project-footer">
-                    <span>Problem solving skills</span>
-                    <span>Strengthened logical thinking</span>
-                </div>
-            </div>
-        </div>
-        <!-- End of Project 2 -->
-        
-    </div>
-</section>
-
+    <!-- SKILLS -->
     <section id="skills" class="section">
-    <h2 class="section-title">🧠 Skills & Expertise</h2>
-    <div class="skills-grid">
-        <div class="skills-column">
-            <h3>Technical Skills</h3>
-            <ul>
-                <li>UI/UX Design (Figma, Wireframing, Prototyping)</li>
-                <li>Python Programming (Basics to Intermediate)</li>
-                <li>JavaScript (Basics)</li>
-                <li>HTML & CSS (Basics)</li>
-            </ul>
+        <h2 class="section-title">🧠 Skills & Expertise</h2>
+        <div class="skills-grid">
+            <div class="skills-column">
+                <h3>Technical Skills</h3>
+                <ul>
+                    <li>UI/UX Design (Figma, Wireframing, Prototyping)</li>
+                    <li>Python Programming (Basics to Intermediate)</li>
+                    <li>JavaScript (Basics)</li>
+                    <li>HTML & CSS (Basics)</li>
+                </ul>
+            </div>
+            <div class="skills-column">
+                <h3>Soft Skills</h3>
+                <ul>
+                    <li>Creative Thinking</li>
+                    <li>Problem Solving</li>
+                    <li>Attention to Detail</li>
+                    <li>Adaptability</li>
+                    <li>Clear Communication</li>
+                </ul>
+            </div>
         </div>
-        <div class="skills-column">
-            <h3>Soft Skills</h3>
-            <ul>
-                <li>Creative Thinking</li>
-                <li>Problem Solving</li>
-                <li>Attention to Detail</li>
-                <li>Adaptability</li>
-                <li>Clear Communication</li>
-            </ul>
-        </div>
-    </div>
-</section>
+    </section>
 
-
+    <!-- EXPERIENCE -->
     <section id="experience" class="section">
-    <h2 class="section-title">🏆 Certificates & Interests</h2>
-    <div class="experience-grid">
-        <!-- Certificates -->
-        <div class="exp-card">
-            <div class="exp-header">
-                <i class="fas fa-certificate exp-icon"></i>
-                <h3>Certificates</h3>
+        <h2 class="section-title">🏆 Certificates & Interests</h2>
+        <div class="experience-grid">
+            <div class="exp-card">
+                <div class="exp-header">
+                    <i class="fas fa-certificate exp-icon"></i>
+                    <h3>Certificates</h3>
+                </div>
+                <ul class="exp-list">
+                    <li>Adobe Certified Expert - Photoshop & Illustrator</li>
+                    <li>Figma UI/UX Design Fundamentals</li>
+                    <li>Python for Designers (Intermediate)</li>
+                </ul>
             </div>
-            <ul class="exp-list">
-                <li>Adobe Certified Expert - Photoshop & Illustrator</li>
-                <li>Figma UI/UX Design Fundamentals</li>
-                <li>Python for Designers (Intermediate)</li>
-            </ul>
-        </div>
-        <!-- Interests -->
-        <div class="exp-card">
-            <div class="exp-header">
-                <i class="fas fa-heart exp-icon"></i>
-                <h3>Design Achievements</h3>
+            <div class="exp-card">
+                <div class="exp-header">
+                    <i class="fas fa-heart exp-icon"></i>
+                    <h3>Design Achievements</h3>
+                </div>
+                <ul class="exp-list">
+                    <li>Designed posters, presentations, digital creatives</li>
+                    <li>Built UI designs for apps and websites</li>
+                    <li>Worked on branding/awareness concepts</li>
+                    <li>Collaborated with feedback loops</li>
+                </ul>
             </div>
-            <ul class="exp-list">
-                <li>Designed posters, presentations, and digital creatives</li>
-                <li>Built UI designs for apps and websites</li>
-                <li>Worked on branding and awareness concepts</li>
-                <li>Collaborated with feedback loops to improve visuals</li>
-            </ul>
         </div>
-    </div>
-</section>
+    </section>
 
-        
-
+    <!-- CONTACT -->
     <section id="contact" class="section">
         <h2 class="section-title">📬 Contact Information</h2>
         <div class="contact-content">
@@ -192,24 +165,23 @@
                 </div>
                 <div class="contact-item">
                     <i class="fab fa-linkedin"></i>
-                    <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a>
+                    <a href="https://www.linkedin.com/in/harnika-anandkumar" target="_blank">LinkedIn</a>
                 </div>
                 <div class="contact-item">
                     <i class="fab fa-github"></i>
-                    <a href="https://yourlink.com" target="_blank">Portfolio / GitHub</a>
+                    <a href="https://github.com/harnika3828" target="_blank">GitHub</a>
                 </div>
             </div>
             <div class="personal-statement">
-                <p>🌱 I believe great design is not just about aesthetics, but about emotion, clarity, and purpose. I approach every project with curiosity and a desire to continuously learn, grow, and create meaningful digital experiences that connect with people.</p>
+                <p>🌱 Great design is about emotion, clarity, and purpose. I approach every project with curiosity, continuous learning, and a desire to create meaningful digital experiences that connect with people.</p>
             </div>
         </div>
         <div class="cta">
-            <p>Interested in collaborating or discussing a project? Let’s connect and create something impactful together.</p>
-            <p>📩 Reach out via email or LinkedIn — I’d love to hear from you!</p>
+            <p>Interested in collaborating or discussing a project? Let's connect and create something impactful together!</p>
+            <p>📩 Reach out via email or LinkedIn</p>
         </div>
     </section>
 
     <script src="js/script.js"></script>
 </body>
 </html>
-
