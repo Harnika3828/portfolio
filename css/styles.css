@@ -4,9 +4,9 @@
     --bg-tertiary: #252525;
     --text-primary: #ffffff;
     --text-secondary: #b8b8b8;
-    --accent-primary: linear-gradient(135deg, #89CFF0 0%, #FFB6C1 100%); /* Baby Blue to Baby Pink */
-    --accent-secondary: #FFB6C1; /* Baby Pink */
-    --accent-blue: #89CFF0; /* Baby Blue */
+    --accent-primary: linear-gradient(135deg, #4FA3D1 0%, #FF69B4 100%); /* Deeper Blue to Hot Pink */
+    --accent-secondary: #FF69B4; /* Hot Pink */
+    --accent-blue: #4FA3D1; /* Deep Baby Blue */
     --glass-bg: rgba(255, 255, 255, 0.05);
     --glass-border: rgba(255, 255, 255, 0.1);
     --shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
@@ -202,12 +202,12 @@ body {
 .btn-primary {
     background: var(--accent-primary);
     color: white;
-    box-shadow: 0 10px 30px rgba(137, 207, 240, 0.4);
+    box-shadow: 0 10px 30px rgba(79, 163, 209, 0.5);
 }
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(137, 207, 240, 0.6);
+    box-shadow: 0 15px 40px rgba(79, 163, 209, 0.7);
 }
 
 .btn-secondary {
@@ -399,7 +399,7 @@ body {
 
 .skill-bar {
     width: 100%;
-    height: 8px;
+    height: 10px;
     background: rgba(255, 255, 255, 0.08);
     border-radius: 10px;
     overflow: hidden;
@@ -409,11 +409,11 @@ body {
 .skill-progress {
     height: 100%;
     width: var(--skill-percent);
-    background: linear-gradient(90deg, #89CFF0 0%, #FFB6C1 100%); /* Baby Blue to Baby Pink */
+    background: linear-gradient(90deg, #4FA3D1 0%, #FF69B4 100%); /* Deeper Blue to Hot Pink */
     border-radius: 10px;
     position: relative;
     animation: fillBar 1.5s ease-out forwards;
-    box-shadow: 0 0 10px rgba(137, 207, 240, 0.6);
+    box-shadow: 0 0 15px rgba(79, 163, 209, 0.7);
 }
 
 .skill-progress::after {
@@ -442,7 +442,7 @@ body {
 }
 
 .skills-column li:hover .skill-progress {
-    box-shadow: 0 0 20px rgba(137, 207, 240, 0.9), 0 0 30px rgba(255, 182, 193, 0.6);
+    box-shadow: 0 0 25px rgba(79, 163, 209, 1), 0 0 35px rgba(255, 105, 180, 0.8);
 }
 
 /* EXPERIENCE */
@@ -483,7 +483,7 @@ body {
 .exp-icon {
     font-size: 2.5rem;
     color: var(--accent-secondary);
-    background: rgba(255, 182, 193, 0.2);
+    background: rgba(255, 105, 180, 0.2);
     padding: 1rem;
     border-radius: 50%;
 }
@@ -535,6 +535,7 @@ body {
 .contact-item a {
     color: var(--text-primary);
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .contact-item a:hover {
