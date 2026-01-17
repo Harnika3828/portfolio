@@ -125,20 +125,37 @@ body {
 /* HERO */
 .hero {
     min-height: 100vh;
+    max-width: 1400px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
-    padding-top: 100px;
-    gap: 4rem;
+    justify-content: center;
+    gap: clamp(2rem, 5vw, 6rem);
+    padding: 120px 2rem 100px;
+    position: relative;
 }
 
 .hero-content {
     flex: 1;
-    padding-left: 2rem;
+    max-width: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 550px;
-    gap: 1.5rem;
+    gap: clamp(1rem, 2.5vw, 1.8rem);
+    padding-right: clamp(1rem, 3vw, 3rem);
+}
+
+.hero-image {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-card {
+    width: clamp(280px, 30vw, 360px);
+    height: clamp(280px, 30vw, 360px);
+    position: relative;
 }
 
 .hero-title {
