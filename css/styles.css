@@ -601,6 +601,7 @@ body {
 }
 
 /* HOBBIES */
+/* HOBBIES */
 .hobbies-subtitle {
     text-align: center;
     color: var(--text-secondary);
@@ -615,7 +616,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     max-width: 1200px;
-    margin: 3rem auto 0;
+    margin: 0 auto;
 }
 
 .hobby-card {
@@ -675,6 +676,24 @@ body {
     font-size: 1rem;
     line-height: 1.6;
     text-align: center;
+}
+
+/* Responsive for Hobbies */
+@media (max-width: 768px) {
+    .hobbies-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hobbies-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hobby-card {
+        padding: 2rem 1.5rem;
+    }
 }
 
 /* CONTACT */
