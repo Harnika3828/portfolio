@@ -600,6 +600,83 @@ body {
     line-height: 1.6;
 }
 
+/* HOBBIES */
+.hobbies-subtitle {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    margin-top: -1.5rem;
+    margin-bottom: 3rem;
+    font-weight: 400;
+}
+
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 3rem auto 0;
+}
+
+.hobby-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    padding: 2.5rem 2rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hobby-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+    border-color: rgba(79, 163, 209, 0.3);
+}
+
+.hobby-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #4FA3D1 0%, #FF69B4 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 10px 30px rgba(79, 163, 209, 0.4);
+    transition: var(--transition);
+}
+
+.hobby-card:hover .hobby-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 15px 40px rgba(79, 163, 209, 0.6);
+}
+
+.hobby-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.hobby-card h3 {
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.hobby-card p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
 /* CONTACT */
 .contact-content {
     display: grid;
@@ -695,7 +772,7 @@ body {
     
     .contact-content { grid-template-columns: 1fr; gap: 2rem; }
     
-    .skills-grid, .experience-grid, .achievements-grid { 
+    .skills-grid, .experience-grid, .achievements-grid, .hobbies-grid { 
         grid-template-columns: 1fr; 
     }
     
@@ -706,6 +783,11 @@ body {
     .achievement-image {
         height: 200px;
     }
+    
+    .hobbies-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -713,4 +795,12 @@ body {
     .hero-subtitle { font-size: clamp(1.1rem, 4vw, 1.25rem); }
     .profile-card { width: 280px; height: 280px; }
     .projects-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    
+    .hobbies-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hobby-card {
+        padding: 2rem 1.5rem;
+    }
 }
