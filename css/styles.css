@@ -448,8 +448,8 @@ body {
 /* EXPERIENCE */
 .experience-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
     max-width: 1000px;
     margin: 3rem auto 0;
     justify-items: center;
@@ -508,31 +508,23 @@ body {
     color: var(--accent-blue);
 }
 
-/* ACHIEVEMENTS - SINGLE DEFINITION */
-/* ACHIEVEMENTS - SINGLE DEFINITION */
-.achievements-section {
-    background: transparent;
-    padding: 100px 2rem;
+/* ACHIEVEMENTS */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
     max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
+    margin: 3rem auto 0;
+    justify-items: center;
 }
 
 .achievements-subtitle {
     text-align: center;
-    color: #d4c4b0;
+    color: var(--text-secondary);
     font-size: 1.2rem;
     margin-top: -1.5rem;
     margin-bottom: 3rem;
     font-weight: 400;
-}
-
-.achievements-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .achievement-card {
@@ -544,6 +536,8 @@ body {
     box-shadow: var(--shadow);
     transition: var(--transition);
     cursor: pointer;
+    width: 100%;
+    max-width: 400px;
 }
 
 .achievement-card:hover {
@@ -571,7 +565,6 @@ body {
 
 .achievement-content {
     padding: 2rem;
-    background: var(--bg-secondary);
 }
 
 .achievement-badge {
@@ -606,23 +599,6 @@ body {
     font-size: 1rem;
     line-height: 1.6;
 }
-
-/* Achievements Mobile */
-@media (max-width: 768px) {
-    .achievements-section {
-        padding: 60px 1rem;
-    }
-    
-    .achievements-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .achievement-image {
-        height: 200px;
-    }
-}
-
 
 /* CONTACT */
 .contact-content {
@@ -719,19 +695,12 @@ body {
     
     .contact-content { grid-template-columns: 1fr; gap: 2rem; }
     
-    .skills-grid, .experience-grid { grid-template-columns: 1fr; }
-    
-    .skills-column, .exp-card { max-width: none; }
-    
-    /* Achievements Mobile */
-    .achievements-section {
-        padding: 60px 0;
+    .skills-grid, .experience-grid, .achievements-grid { 
+        grid-template-columns: 1fr; 
     }
     
-    .achievements-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        padding: 0 1rem;
+    .skills-column, .exp-card, .achievement-card { 
+        max-width: none; 
     }
     
     .achievement-image {
